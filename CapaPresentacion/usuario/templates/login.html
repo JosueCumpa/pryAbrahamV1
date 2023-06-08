@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="../../static/images/logo.jpg">
+    <title>Sistema de prediccion - Inicio de sesión</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="contenedor-formulario contenedor">
+        <div class="imagen-formulario">
+        </div>
+        <form class="formulario" action="{{url_for('usuario.iniciar_sesion')}}" method="POST">
+            <div class="texto-formulario">
+                <h2>Bienvenido de nuevo</h2>
+                <p>Inicia sesión con tu cuenta</p>
+            </div>
+            <div class="input">
+                <label for="usuario">Usuario</label>
+                <input placeholder="Ingresa tu usuario" required type="text" name="usuario" id="usuario">
+            </div>
+            <div class="input">
+                <label for="contraseña">Contraseña</label>
+                <input placeholder="Ingresa tu contraseña" required type="password" name="contraseña" id="contraseña">
+            </div>
+            <!-- <div class="password-olvidada">
+                <a href="#">¿Olvidaste tu contraseña?</a>  #No sera funcional
+            </div>-->
+            <div class="input"> 
+                <input type="submit">
+            </div>
+        </form>
+    </div>
+
+    {% include "assets/sweet_alerts.html" %}
+</body>
+
+</html>

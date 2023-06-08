@@ -23,7 +23,32 @@ INSERT INTO USUARIO(idrol, nombre, usuario, clave, correo, estado) VALUES(
     1,
     'Usuario de prueba',
     'Admin123',
-    'pbkdf2:sha256:600000$M09Hs8m0HnOgjHEN$9e09f13c3f67a284b1457535ec98155af7591427150c9cc069ef1e25bd728398',
+    'sha256$JZlcJysAqPkmkFFk$a2a3ec1b1b7a348e91f5ef853c04bae1264b37879d746739a1152c0b36dc683c',
     'admin123@gmail.com',
     'A'
 );
+
+
+CREATE OR REPLACE FUNCTION fn_login
+(p_usuario VARCHAR(20)
+)
+RETURNS TABLE(
+	id integer, 
+    idrol integer, 
+    nombre VARCHAR(100), 
+    usuario VARCHAR(100),
+	clave text, 
+    correo VARCHAR(100), 
+    estado CHAR(1), 
+    rol VARCHAR(50))
+LANGUAGE 'plpgsql'
+AS $BODY$
+BEGIN
+	RETURN QUERY
+		SELECT 
+			u.*, r.nombre as rol
+		FROM usuario u
+			INNER JOIN rol r on r.id=u.idrol
+		WHERE u.usuario=p_usuario;
+END
+$BODY$;

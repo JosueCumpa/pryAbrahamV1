@@ -1,0 +1,163 @@
+:root {
+    --second-text-color: #24262d;
+    --second-bg-color: #ffffff;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contenido {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.col-custom {
+    flex-basis: 1%;
+    max-width: 1%;
+}
+
+#searchbar {
+    font-family: Arial, FontAwesome
+}
+
+
+.pagination {
+    padding-top: 13px;
+}
+
+.above-table {
+    padding-top: 13px;
+    padding-bottom: 10px;
+}
+
+.flotante {
+    position: fixed;
+    bottom: 5%;
+    right: 3%;
+    border-radius: 50px;
+    width: 55px;
+    height: 55px;
+    font-size: 25px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.ls-button {
+    font-size: 2vb;
+}
+
+
+.second-text {
+    color: var(--second-text-color);
+    text-decoration: none;
+}
+
+.first-text {
+    color: var(--second-bg-color);
+    text-decoration: none;
+}
+
+.secondary-bg {
+    background-color: var(--second-bg-color);
+}
+
+.rounded-full {
+    border-radius: 100%;
+}
+
+#wrapper {
+    overflow-x: hidden;
+}
+
+#sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -15rem;
+    transition: margin 0.25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+    width: 15rem;
+}
+
+#sidebar-wrapper .list-group {
+    width: 15rem;
+}
+
+#page-content-wrapper {
+    min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+}
+
+#menu-toggle {
+    cursor: pointer;
+}
+
+.list-group-item {
+    border: none;
+    padding: 20px 30px;
+}
+
+.list-group-item.active {
+    font-weight: bold;
+    border: none;
+}
+
+@media (min-width: 992px) {
+    #sidebar-wrapper {
+        margin-left: 0;
+
+    }
+
+    #page-content-wrapper {
+        min-width: 0;
+        width: 100%;
+
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: -15rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    #sidebar-wrapper {
+        margin-left: 0;
+
+    }
+
+    .offcanvas-lg.offcanvas-start {
+        width: 20rem;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: 0;
+    }
+
+    #sidebar-wrapper .sidebar-heading {
+        padding: 0.875rem 1.25rem;
+        font-size: 1.2rem;
+        width: 20rem;
+    }
+
+    #sidebar-wrapper .list-group {
+        padding: 0.875rem 1.25rem;
+        font-size: 1.2rem;
+        width: 20rem;
+    }
+}
+
+
+.btn-success {
+    background-color: #48C774;
+}
+
+.dropdown-item-red:hover {
+    background-color: #ff8400 !important;
+    color: white !important;
+}
