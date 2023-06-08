@@ -23,5 +23,7 @@ git push -u origin N_su_rama
 ```
 git pull origin main o master o N_su_rama
 ```
+## Colaboradores - ing de sistemas y computacion - 8 ciclo
+#### CUMPA CHANCAFE JOSUE GIANCARLOS 
 
 
