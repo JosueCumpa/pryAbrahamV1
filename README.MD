@@ -23,6 +23,14 @@ git push -u origin N_su_rama
 ```
 git pull origin main o master o N_su_rama
 ```
+## Publicar con NGROK para pruebas
+* instalar Ngrok (Recomendado para publicar proyecto de pruebas)
+* abrir un cmd en la carpeta raiz del NGROK
+* ingregar la clave que te da la pagina una vez que te registrar en el cmd
+* Una vez configurado ejecuitar:
+```ngrok http "Puerto-Escucha"```	
+
+
 ## Colaboradores - ing de sistemas y computacion - 8 ciclo
 #### CUMPA CHANCAFE JOSUE GIANCARLOS 
 
