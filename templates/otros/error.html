@@ -1,0 +1,16 @@
+{% extends "maestra.html" %}
+{% block titulo %} Ha ocurrido un error {% endblock %}
+{% block contenido %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="card-title text-danger mb-4">Ha ocurrido un error</h1>
+                    <p class="card-text">{{ error }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock%}

@@ -1,0 +1,57 @@
+<div id="sidebar-wrapper" class="border-end offcanvas-lg offcanvas-start">
+
+    <div class="sidebar-heading bg-danger text-center py-4 fs-4 fw-bolder text-uppercase">
+      <a class="first-text" href="{{url_for('inicio.inicio')}}">Sistema de Prediccion</a>
+    </div>
+  
+    <div class="list-group list-group-flush">
+  
+      <a href="#moduloInstitucion" data-bs-toggle="collapse" aria-expanded="false"
+        class="list-group-item list-group-item-action fw-bolder flex-wrap ">
+        <i class="fas fa-university"></i>
+        <span class="d-none d-sm-inline">Institución</span></a>
+  
+      <ul class="collapse " id="moduloInstitucion">
+        <a class="list-group-item list-group-item-action" href="#">Facultad</a>
+        <a class="list-group-item list-group-item-action" href="#">Escuela Profesional</a>
+        <a class="list-group-item list-group-item-action" href="#">Plan de estudio</a>
+        <a class="list-group-item list-group-item-action" href="#">Línea de desarrollo</a>
+        <a class="list-group-item list-group-item-action" href="{{url_for('semestre.semestres')}}">Semestre Académico</a>
+        <a class="list-group-item list-group-item-action" href="#">Estudiante</a>
+        <a class="list-group-item list-group-item-action" href="#">Docente de apoyo</a>
+      </ul>
+  
+  
+      <a href="#moduloPractica" data-bs-toggle="collapse" aria-expanded="false"
+        class="list-group-item list-group-item-action  fw-bolder"><i class="fas fa-file-alt"></i>
+        <span class="d-none d-sm-inline">Práctica</span></a>
+  
+      <ul class="collapse list-unstyled" id="moduloPractica">
+        <a class="list-group-item list-group-item-action " href="#">Práctica</a>
+        <a class="list-group-item list-group-item-action " href="#submoduloDocumentos"
+          data-bs-toggle="collapse" aria-expanded="false">Documentos</a>
+  
+        <ul class="collapse list-unstyled" id="submoduloDocumentos">
+          <a class="list-group-item list-group-item-action " href="#">Informe Inicial</a>
+          <a class="list-group-item list-group-item-action " href="#">Evaluación de desempeño</a>
+          <a class="list-group-item list-group-item-action " href="#">Informe Final</a>
+        </ul>
+  
+        <a class="list-group-item list-group-item-action " href="#">Jefe inmediato</a>
+        <a class="list-group-item list-group-item-action " href="#">Centro de prácticas</a>
+      </ul>
+  
+      <a href="#moduloUbicacion" data-bs-toggle="collapse" aria-expanded="false"
+        class="list-group-item list-group-item-action fw-bolder"><i class="fas fa-map-marker-alt"></i><span
+          class="d-none d-sm-inline">Ubicación</span></a>
+  
+      <ul class="collapse list-unstyled" id="moduloUbicacion">
+        <a class="list-group-item list-group-item-action " href="#">País</a>
+        <a class="list-group-item list-group-item-action " href="#">Departamento</a>
+        <a class="list-group-item list-group-item-action " href="#">Provincia</a>
+        <a class="list-group-item list-group-item-action " href="#">Distrito</a>
+      </ul>
+  
+    </div>
+  
+  </div>

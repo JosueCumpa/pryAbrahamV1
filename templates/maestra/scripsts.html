@@ -1,0 +1,25 @@
+<script src="{{ url_for('static', filename='js/sidebar.js') }}"></script>
+<script src="{{ url_for('static', filename='js/checkbox.js') }}"></script>
+<script src="{{ url_for('static', filename='js/eliminar.js') }}"></script>
+<script src="https://cdn.datatables.net/v/bs5/dt-1.13.4/datatables.min.js"></script>
+
+<script>
+    var table = new DataTable('#tablita', {
+        language: {
+            url: 'https://cdn.datatables.net/plug-ins/1.13.4/i18n/es-ES.json',
+        },
+        lengthMenu: [
+            [10, 25, 50, -1],
+            [10, 25, 50, 'All'],
+        ],
+        dom: 'tp',
+    });
+
+    $('#searchbar').on('keyup', function () {
+        table.search(this.value).draw();
+    });
+</script>
+<script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script>
